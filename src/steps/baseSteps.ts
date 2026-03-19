@@ -14,10 +14,4 @@ export class BaseSteps{
     async waitFor(time:number):Promise<void>{
         await this.page.waitForTimeout(time);
     }
-
-    //sacar screnshot
-
-    //validar titulo pagina (no de la web)
-
-    
 }
