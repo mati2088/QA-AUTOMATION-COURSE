@@ -1,11 +1,12 @@
 # QA Automation Course
 
-Proyecto de automatización de pruebas E2E con **Playwright** y **TypeScript**, usando el patrón Page Object Model (POM). La aplicación bajo prueba es un homebanking demo.
+Proyecto de automatización de pruebas E2E con **Playwright** y **TypeScript**, usando el patrón **Page Object Model (POM)**. La aplicación bajo prueba es un homebanking demo.
 
 ## Requisitos previos
 
 - [Node.js](https://nodejs.org/) (LTS recomendado, v18+)
 - npm (incluido con Node.js)
+- [Allure Commandline](https://docs.qameta.io/allure/) instalado globalmente para generar reportes
 - Git
 
 ## Instalación
@@ -13,7 +14,7 @@ Proyecto de automatización de pruebas E2E con **Playwright** y **TypeScript**, 
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <https://github.com/mati2088/QA-AUTOMATION-COURSE.git>
+git clone https://github.com/mati2088/QA-AUTOMATION-COURSE.git
 cd QA-AUTOMATION-COURSE
 ```
 
@@ -50,20 +51,35 @@ PASSWORD=tu_contraseña
 ```
 QA-AUTOMATION-COURSE/
 ├── src/
+│   ├── data/           # Datos de prueba en formato JSON
 │   ├── pages/          # Page Objects (selectores y acciones por página)
 │   ├── steps/          # Steps (lógica de negocio reutilizable)
 │   └── tests/          # Specs (casos de prueba)
+├── allure-results/     # Resultados raw generados por allure-playwright
+├── allure-report/      # Reporte HTML generado por Allure
 ├── playwright.config.ts
 ├── package.json
 └── .env                # Variables de entorno (no versionado)
 ```
+
+## Datos de prueba (JSON)
+
+Los datos de prueba se manejan desde archivos JSON ubicados en `src/data/`. Esto permite centralizar y mantener los datos sin tocar el código de los tests.
+
+Ejemplo: `src/data/loginData.json`
 
 ## Ejecutar los tests
 
 ### Todos los tests
 
 ```bash
-npx playwright test
+npm test
+```
+
+### Con interfaz visual (modo UI)
+
+```bash
+npm run test:ui
 ```
 
 ### Un archivo específico
@@ -78,11 +94,17 @@ npx playwright test src/tests/login.spec.ts
 npx playwright test --grep "@pruebaTarjeta"
 ```
 
-### Ver el reporte HTML tras la ejecución
+## Reportes con Allure
+
+Este proyecto usa **allure-playwright** como reporter. Los resultados raw se generan automáticamente en `allure-results/` al correr los tests.
+
+### Generar y abrir el reporte
 
 ```bash
-npx playwright show-report
+npm run reporte
 ```
+
+> Este comando genera el reporte HTML en `allure-report/` y lo abre en el navegador automáticamente.
 
 ## Configuración
 
@@ -95,7 +117,7 @@ El archivo `playwright.config.ts` define:
 | Modo headless | `false` (ventana visible) |
 | Screenshots | Solo en fallos |
 | Reintentos en CI | 2 |
-| Reporter | HTML |
+| Reporter | allure-playwright |
 
 ## CI/CD
 

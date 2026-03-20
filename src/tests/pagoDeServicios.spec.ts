@@ -18,7 +18,7 @@ test.describe('Pago de Servicios', () => {
         await loginSteps.iniciarSesion(user, password);
     });
 
-    test('Ingresar a pago de servicios exitosamente', async ({ page }) => {
+    test('Ingresar a pago de servicios exitosamente', async () => {
         await pagosSteps.irAPagoDeServicios();
         await pagosSteps.validarPaginaPagosCargada();
     });
