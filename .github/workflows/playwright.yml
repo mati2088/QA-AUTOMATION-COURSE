@@ -24,9 +24,6 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test
-        env:
-          USUARIO: ${{ secrets.USUARIO }}
-          PASSWORD: ${{ secrets.PASSWORD }}
 
       - name: Generate Allure report
         if: always()
