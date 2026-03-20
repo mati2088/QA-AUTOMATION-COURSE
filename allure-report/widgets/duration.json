@@ -1,0 +1,1 @@
+[{"uid":"f1d0bf36de923e97","name":"Login Cuenta bloquead","time":{"start":1773960155605,"stop":1773960157015,"duration":1410},"status":"failed","severity":"normal"},{"uid":"fbd10b4c8f4c03e6","name":"Login Exitoso","time":{"start":1773960518965,"stop":1773960520055,"duration":1090},"status":"passed","severity":"normal"}]
