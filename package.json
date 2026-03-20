@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:file": "npx playwright test"
     "reporte":"allure generate allure-results --clean -o allure-report && allure open allure-report"
   },
   "keywords": [],
@@ -11,6 +14,10 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.58.2",
+    "@types/node": "^25.4.0"
+  },
+  "dependencies": {
+    "@google/gemini-cli": "^0.34.0"
     "@types/node": "^25.4.0",
     "allure-commandline": "^2.38.1",
     "allure-playwright": "^3.6.0"

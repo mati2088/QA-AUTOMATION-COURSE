@@ -22,9 +22,11 @@ export class BasePage {
         await expect(locator).toBeVisible();
      }
 
-     /*async validateTextExact(locator:Locator,texto:string):Promise<void>{
-      await expect(locator).toHaveText(texto); 
-      //validar texto exactamente
-     }*/
+     async validateElementEnabled(locator:Locator):Promise<void>{
+        await expect(locator).toBeEnabled();
+     }
 
+     async validateElementText(locator:Locator, texto:string):Promise<void>{
+        await expect(locator).toHaveText(texto);
+     }
 }
