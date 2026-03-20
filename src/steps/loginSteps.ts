@@ -15,7 +15,7 @@ export class LoginSteps extends BaseSteps{
         await this.loginPage.fillUser(usuario);
         await this.loginPage.fillPassword(password);
         await this.loginPage.clickButtonIngresar();
-        await this.waitFor(3000);
+        //await this.waitFor(3000);
     }
 
     /*async validarTextoExactamente(texto:string):Promise<void>{

@@ -1,0 +1,57 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e5]: ¡Bienvenido! Inicio de sesión exitoso
+  - generic [ref=e6]:
+    - navigation [ref=e7]:
+      - generic [ref=e8]:
+        - img [ref=e9]
+        - generic [ref=e12]: Home Banking
+      - generic [ref=e13]:
+        - generic [ref=e14]: Juan Pérez
+        - button "Salir" [ref=e15] [cursor=pointer]
+    - generic [ref=e16]:
+      - complementary [ref=e17]:
+        - list [ref=e18]:
+          - listitem [ref=e19] [cursor=pointer]:
+            - img [ref=e20]
+            - generic [ref=e25]: Inicio
+          - listitem [ref=e26] [cursor=pointer]:
+            - img [ref=e27]
+            - generic [ref=e29]: Transferencias
+          - listitem [ref=e30] [cursor=pointer]:
+            - img [ref=e31]
+            - generic [ref=e33]: Plazos Fijos
+          - listitem [ref=e34] [cursor=pointer]:
+            - img [ref=e35]
+            - generic [ref=e37]: Préstamos
+          - listitem [ref=e38] [cursor=pointer]:
+            - img [ref=e39]
+            - generic [ref=e41]: Pago de Servicios
+          - listitem [ref=e42] [cursor=pointer]:
+            - img [ref=e43]
+            - generic [ref=e45]: Tarjetas Virtuales
+          - listitem [ref=e46] [cursor=pointer]:
+            - img [ref=e47]
+            - generic [ref=e50]: Mis Datos
+      - main [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - heading "Tarjetas Virtuales" [level=2] [ref=e54]
+            - paragraph [ref=e55]: Genera tarjetas de débito virtuales para compras online
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - generic [ref=e58]:
+                - generic [ref=e59]:
+                  - generic [ref=e60]: "Sincronizar con cuenta:"
+                  - combobox "Sincronizar con cuenta:" [ref=e61]:
+                    - option "Cuenta Corriente - **** **** **** 1234" [selected]
+                    - option "Caja de Ahorro - **** **** **** 5678"
+                - button "+ Generar Nueva Tarjeta" [ref=e62] [cursor=pointer]
+              - paragraph [ref=e63]: "Límite: 1 tarjeta virtual activa por cuenta (Caja de Ahorro / Cta Cte)"
+            - generic [ref=e65]:
+              - generic [ref=e66]: 💳
+              - paragraph [ref=e67]: No tienes una tarjeta virtual activa
+              - paragraph [ref=e68]: Genera tu tarjeta virtual para compras seguras en internet.
+```

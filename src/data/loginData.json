@@ -1,0 +1,13 @@
+{
+
+  "loginExitoso":{
+     "usuarioValido":"demo",
+     "passwordValida":"demo123"  
+},
+
+ "loginConCtaBloqueada":{
+     "usuarioBloqueado":"locked",
+     "passwordBloqueada":"locked"  
+}
+
+}

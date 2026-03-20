@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1410","Login Cuenta bloquead","chromium","2026-03-19","failed","2026-03-19","","","",""
+"","1090","Login Exitoso","chromium","2026-03-19","passed","2026-03-19","","","",""
