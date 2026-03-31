@@ -20,11 +20,11 @@ test('Pagar servicio', { tag: '@pagoServicio' }, async ({ page }) => {
     await pagarServicioSteps.irSeccionPagarServicio()
     await page.waitForTimeout(3000);
 
-    const cerrarSesionSteps = new PagarServicioSteps(page)
+    const cerrarSesionSteps = new CerrarSesionPage(page)
     await cerrarSesionSteps.irSeccionCerrarSesion()
     await page.waitForTimeout(3000);
 
-    const validarCerrarSesionSteps = new PagarServicioSteps(page)
+    const validarCerrarSesionSteps = new CerrarSesionPage(page)
     await validarCerrarSesionSteps.validarCerrarSesion()
     await page.waitForTimeout(3000);
     
